@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/orangebg"
+    tools:context=".CreateAccountActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/templogo2"
+        android:layout_height="120dp" />
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:id="@+id/txt_username"
+        android:textColorHint="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/roundtxtbox"
+        android:hint="Username"
+        android:textSize="16dp"
+        android:padding="10dp"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/txt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/roundtxtbox"
+        android:hint="Password"
+        android:textSize="16dp"
+        android:textColorHint="#FFF"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/roundedwhite"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#FFF"
+            android:textSize="16dp"
+            android:text="Don't have an account?   "/>
+
+        <TextView
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="Sign Up Now"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
