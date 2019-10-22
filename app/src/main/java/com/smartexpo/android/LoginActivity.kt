@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
-class CreateAccountActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +30,7 @@ class CreateAccountActivity : AppCompatActivity() {
     }
 
     private fun login(username:String, password:String){
-        Toast.makeText(this,"Hello, "+username, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, CheckinActivity::class.java)
+        startActivity(intent)
     }
 }

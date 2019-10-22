@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         }
         val btnSignIn : TextView = findViewById(R.id.btn_signin)
         btnSignIn.setOnClickListener{
-            val intent = Intent(this, CreateAccountActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
