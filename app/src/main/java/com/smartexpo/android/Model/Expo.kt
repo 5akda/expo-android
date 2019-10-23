@@ -1,4 +1,4 @@
-package com.smartexpo.android
+package com.smartexpo.android.Model
 
 class Expo(val name: String) {
     val date: String? = null

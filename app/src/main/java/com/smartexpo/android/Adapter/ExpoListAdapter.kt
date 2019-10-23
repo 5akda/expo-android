@@ -1,4 +1,4 @@
-package com.smartexpo.android
+package com.smartexpo.android.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,19 +6,21 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.smartexpo.android.Model.Expo
+import com.smartexpo.android.R
 
 class ExpoListAdapter(private val expoItems: List<Expo>) :
         RecyclerView.Adapter<ExpoListAdapter.ExpoHolder>(){
 
         override fun getItemCount() = expoItems.size
 
-        override fun onBindViewHolder(holder: ExpoListAdapter.ExpoHolder, position: Int) {
+        override fun onBindViewHolder(holder: ExpoHolder, position: Int) {
                 holder.bind(expoItems[position])
         }
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExpoListAdapter.ExpoHolder {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExpoHolder {
                 val inflater = LayoutInflater.from(parent.context)
-                return ExpoHolder(inflater,parent)
+                return ExpoHolder(inflater, parent)
         }
 
         class ExpoHolder(inflater: LayoutInflater, parent: ViewGroup) :

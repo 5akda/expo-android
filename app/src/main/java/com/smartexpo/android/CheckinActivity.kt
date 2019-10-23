@@ -1,10 +1,14 @@
 package com.smartexpo.android
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.smartexpo.android.Adapter.ExpoListAdapter
+import com.smartexpo.android.Model.Expo
 
 class CheckinActivity : AppCompatActivity() {
 
@@ -14,6 +18,7 @@ class CheckinActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_checkin)
 
+
         /* MOCK UP */
         val expoList = listOf(
             Expo("Motor Show"),
@@ -22,7 +27,8 @@ class CheckinActivity : AppCompatActivity() {
             Expo("งานหนังสือ")
         )
 
-        // Setup RecyclerView //
+
+        //// Setup RecyclerView
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -33,5 +39,17 @@ class CheckinActivity : AppCompatActivity() {
             onFlingListener = null
         }
 
+
+        //// Setup Button
+        val btnScan : Button = findViewById(R.id.btn_scan)
+        btnScan.setOnClickListener{
+            scanQRCode()
+        }
+
+    }
+
+    private fun scanQRCode(){
+        val intent = Intent(this,GuestModeActivity::class.java)
+        startActivity(intent)
     }
 }
