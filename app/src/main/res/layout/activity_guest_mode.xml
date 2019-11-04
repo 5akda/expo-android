@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:id="@+id/tablayout"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal">
@@ -20,6 +20,7 @@
             android:background="@color/colorPrimary"/>
 
         <TextView
+            android:gravity="center_vertical"
             android:layout_marginStart="12dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
@@ -27,10 +28,9 @@
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:background="@color/colorPrimary"
-            android:textStyle="bold"
             android:textColor="#FFF"
-            android:textSize="26dp"
-            android:text="Loading"/>
+            android:textSize="24dp"
+            android:text="กำลังโหลด"/>
 
 
     </LinearLayout>
@@ -50,18 +50,20 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:paddingStart="40dp"
-        android:paddingEnd="40dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:layout_height="52dp">
 
         <ImageButton
+            android:layout_margin="10dp"
             android:src="@drawable/icon_nav_news"
-            android:background="#34000000"
+            android:background="#00000000"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="match_parent"/>
 
         <ImageButton
+            android:layout_margin="10dp"
             android:src="@drawable/icon_nav_chat"
             android:background="#00000000"
             android:layout_width="wrap_content"
@@ -69,6 +71,15 @@
             android:layout_height="match_parent"/>
 
         <ImageButton
+            android:layout_margin="10dp"
+            android:src="@drawable/icon_nav_location"
+            android:background="#00000000"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:layout_margin="10dp"
             android:src="@drawable/icon_nav_user"
             android:background="#00000000"
             android:layout_width="wrap_content"
