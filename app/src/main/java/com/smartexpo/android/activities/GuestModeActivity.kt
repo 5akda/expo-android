@@ -2,6 +2,8 @@ package com.smartexpo.android.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageButton
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.smartexpo.android.R
@@ -20,6 +22,7 @@ class GuestModeActivity : AppCompatActivity(),ViewPager.OnPageChangeListener {
         setContentView(R.layout.activity_guest_mode)
 
         initViewPager()
+        initButton()
 
     }
 
@@ -57,25 +60,28 @@ class GuestModeActivity : AppCompatActivity(),ViewPager.OnPageChangeListener {
     }
 
     private fun initButton(){
-        //////////////////////////////////////
+        val btnBack = findViewById<ImageButton>(R.id.btn_back)
+        btnBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun handleNavItemSelection(itemNum: Int) : Boolean{
         when(itemNum){
             R.id.g_home -> {
-                viewPager.setCurrentItem(0)
+                viewPager.currentItem = 0
                 return true
             }
             R.id.g_chats -> {
-                viewPager.setCurrentItem(1)
+                viewPager.currentItem = 1
                 return true
             }
             R.id.g_maps -> {
-                viewPager.setCurrentItem(2)
+                viewPager.currentItem = 2
                 return true
             }
             R.id.g_user -> {
-                viewPager.setCurrentItem(3)
+                viewPager.currentItem = 3
                 return true
             }
         }

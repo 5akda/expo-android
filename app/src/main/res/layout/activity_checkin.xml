@@ -30,6 +30,8 @@
         android:layout_height="wrap_content"/>
 
     <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layoutContentContainer"
         android:padding="10dp"
         android:background="@drawable/listviewwhite"
         android:layout_marginTop="20dp"
@@ -54,6 +56,25 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutLoadingContainer"
+        android:padding="10dp"
+        android:background="@drawable/listviewwhite"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:indeterminate="true"/>
+
+    </LinearLayout>
+
 
 
 </LinearLayout>

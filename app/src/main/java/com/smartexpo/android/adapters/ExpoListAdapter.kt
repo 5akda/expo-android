@@ -10,7 +10,7 @@ import com.smartexpo.android.models.Expo
 import com.smartexpo.android.R
 
 class ExpoListAdapter(private val expoItems: List<Expo>) :
-        RecyclerView.Adapter<ExpoListAdapter.ExpoHolder>(){
+        RecyclerView.Adapter<ExpoListAdapter.ExpoHolder>() {
 
         override fun getItemCount() = expoItems.size
 
