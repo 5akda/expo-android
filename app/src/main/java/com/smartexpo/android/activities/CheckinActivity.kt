@@ -15,7 +15,6 @@ import com.smartexpo.android.R
 import com.smartexpo.android.activities.presenters.CheckinPresenter
 import com.smartexpo.android.activities.presenters.ICheckin
 import com.smartexpo.android.adapters.ExpoListAdapter
-import com.smartexpo.android.models.Expo
 
 class CheckinActivity : AppCompatActivity(), ICheckin.View {
 
@@ -53,20 +52,18 @@ class CheckinActivity : AppCompatActivity(), ICheckin.View {
         loadingContainer.visibility = View.GONE
     }
 
-    override fun showExpoList(list: List<Expo>) {
-        recyclerView.adapter = ExpoListAdapter(list)
-    }
 
     private fun initListView() {
-        presenter.loadExpoList()
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = ExpoListAdapter(presenter.loadExpoList())
 
         recyclerView.apply {
             layoutManager = GridLayoutManager(context,1, GridLayoutManager.VERTICAL,false)
             isNestedScrollingEnabled = false
             onFlingListener = null
         }
+
     }
 
     private fun initButton(){

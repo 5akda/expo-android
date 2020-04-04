@@ -6,12 +6,11 @@ interface ICheckin {
     interface View {
         fun showLoading()
         fun hideLoading()
-        fun showExpoList(list: List<Expo>)
     }
 
     interface Presenter {
         fun scanQRCode() : Char
         fun cleanUp()
-        fun loadExpoList()
+        fun loadExpoList() : List<Expo>
     }
 }
